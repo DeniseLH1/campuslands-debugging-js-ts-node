@@ -57,6 +57,7 @@ npm test -- ejercicios/ejercicio-009/tests/hypercar.test.js
 ## Resultado
 ### ✅ Validación
 ```text
+
 > campuslands-debugging-js-ts-node@1.0.0 test
 > vitest run ejercicios/ejercicio-009/tests/hypercar.test.js
 
