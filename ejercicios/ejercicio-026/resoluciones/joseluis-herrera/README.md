@@ -61,6 +61,7 @@ npm test -- ejercicios/ejercicio-026/tests/book-progress.test.ts
 ### ✅ Validación
 
 ```text
+
 > campuslands-debugging-js-ts-node@1.0.0 test
 > vitest run ejercicios/ejercicio-026/tests/book-progress.test.ts
 
