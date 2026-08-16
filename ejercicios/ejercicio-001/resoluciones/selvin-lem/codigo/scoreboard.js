@@ -5,5 +5,5 @@ export function calcularResultado(datos) {
 
 export function ordenarRanking(jugadores) {
   // BUG intencional: orden ascendente cuando deberia priorizar mejores resultados.
-  return [...jugadores].sort((a, b) => a.puntos - b.puntos);
+  return [...jugadores].sort((a, b) => b.puntos - a.puntos);
 }

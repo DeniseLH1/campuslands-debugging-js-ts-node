@@ -15,3 +15,33 @@ Reemplacé `join()` por `reduce()` para acumular los puntos numéricamente.
 
 **Cómo lo validé:**  
 Ejecuté nuevamente el test y comprobé que la prueba de cálculo de puntos pasó correctamente.
+
+---
+
+## Error #2 — Orden del ranking
+
+**Qué fallaba:**  
+El ranking se ordenaba de menor a mayor, pero el test esperaba que los jugadores fueran ordenados de mayor a menor puntaje.
+
+**Cómo lo encontré:**  
+El test esperaba el siguiente orden:
+
+    pro → 22
+    elite → 18
+    novato → 7
+
+Pero la función devolvía:
+
+    elite → 18
+    pro → 22
+    novato → 7
+
+Al revisar `sort()`, encontré que la comparación `a.puntos - b.puntos` producía un orden ascendente.
+
+**Qué cambié:**  
+Invertí la comparación para ordenar los puntos de mayor a menor.
+
+    return [...jugadores].sort((a, b) => b.puntos - a.puntos);
+
+**Cómo lo validé:**  
+Ejecuté nuevamente el test y comprobé que el ranking quedó ordenado correctamente de mayor a menor.
