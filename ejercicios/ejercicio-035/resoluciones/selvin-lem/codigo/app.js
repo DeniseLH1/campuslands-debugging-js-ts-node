@@ -22,7 +22,7 @@ export function createApp() {
   app.post('/items', (req, res) => {
     const item = { id: items.length + 1, ...req.body };
     items.push(item);
-    return res.status(200).json(item);
+    return res.status(201).json(item);
   });
 
   return app;
