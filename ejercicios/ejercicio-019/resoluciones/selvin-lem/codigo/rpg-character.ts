@@ -13,5 +13,5 @@ export function calcularPromedio(registros: Registro[]): number {
 
 export function obtenerMejor(registros: Registro[]): Registro | undefined {
   // BUG intencional: devuelve el menor puntaje.
-  return [...registros].sort((a, b) => a.puntos - b.puntos)[0];
+  return [...registros].sort((a, b) => b.puntos - a.puntos)[0];
 }
